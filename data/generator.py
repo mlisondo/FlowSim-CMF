@@ -36,7 +36,7 @@ pythia.init()
 jet_def = fj.JetDefinition(fj.antikt_algorithm, 0.4)
 
 
-def addJetTagging(jet):
+def addJetTagging(jet): # FIGURE OUT WHERE THIS COMES FROM; look at paper (they look at center of jet and all that)
     if abs(jet.flavour) == 5:
         jet.nSV = poisson(0.8)
         jet.btag = atan(uniform(0, jet.pt() / 2)) / pi * 2.0
